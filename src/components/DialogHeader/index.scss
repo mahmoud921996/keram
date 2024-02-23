@@ -1,0 +1,17 @@
+.dialog-header {
+  position: relative;
+  h5 {
+    padding: 0 0.5rem;
+    display: inline-block;
+    margin-inline-start: 1rem;
+    background: white;
+    z-index: 2;
+    position: relative;
+  }
+  .divider {
+    height: 3px;
+    background-color: var(--dark-primary);
+    position: absolute;
+    top: 1rem;
+  }
+}

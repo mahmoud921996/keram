@@ -1,0 +1,13 @@
+.counter-input {
+  input {
+    text-align: center !important;
+  }
+  .v-input__slot {
+    padding: 0 10px !important;
+    background-color: transparent !important;
+    .v-text-field__slot{
+      min-width: 100px !important;
+    }
+  }
+
+}

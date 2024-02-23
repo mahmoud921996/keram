@@ -1,0 +1,94 @@
+
+
+
+:root {
+  --primary: #0cac9d;
+  --secondary:  #ff6121;
+  --light-primary: rgba(12, 172, 157, 0.1);
+  --light-secondary:#fdece4 ;
+  --shadow: rgba(33, 187, 173, 0.46);
+  --primary-radius: 8px;
+}
+
+
+body {
+  .v-application {
+    .primary {
+      background-color: var(--primary) !important;
+      border-color: var(--primary) !important;
+
+      &--text {
+        color: var(--primary) !important;
+        caret-color: var(--primary) !important;
+      }
+    }
+
+    .secondary {
+      background-color: var(--secondary) !important;
+      border-color: var(--secondary) !important;
+
+      &--text {
+        color: var(--secondary) !important;
+        caret-color: var(--secondary) !important;
+      }
+    }
+
+    .light-primary {
+      background-color: var(--light-primary) !important;
+      border-color: var(--light-primary) !important;
+    }
+
+  }
+  .shadow {
+    box-shadow: 0 10px 19px 2px var(--shadow) !important;
+  }
+}
+
+.v-text-field--filled>.v-input__control>.v-input__slot {
+
+  margin-bottom: 4px;
+}
+
+
+.v-text-field.v-text-field--enclosed .v-text-field__details {
+  margin-bottom: -1px;
+}
+
+.primary-radius{
+  border-radius: 8px !important;
+}
+
+.font-bold {
+  font-weight: bold !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.font-light {
+  font-weight: 300 !important;
+}
+
+$english_font: "Poppins", sans-serif;
+$arabic_font: "Bahij TheSansArabic", sans-serif;
+$btn-rounded-border-radius: 5px;
+
+.font-flag {
+  font-family: 'NotoColorEmoji' !important;
+  font-style: normal;
+  font-size: 24px !important;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+.direction-ltr{
+  direction: ltr;
+}

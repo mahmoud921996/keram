@@ -1,0 +1,39 @@
+.accordion{  
+  gap: 24px;
+  .v-expansion-panel{
+    border-radius: 16px !important;
+
+    border: 2px solid rgba(#ddd, 50%);
+
+   &::before {
+      box-shadow: none !important;
+  }
+  &::after {
+      border: none !important;
+  }
+  button{
+    min-height: initial !important;
+    &:focus {
+        &::before {
+            opacity: 0 !important;
+        }
+    }
+  }
+  &--active{
+    .v-icon{
+      color:var(--primary) !important;
+    }
+  }
+  &-header{
+    padding: 20px;
+    border-radius: 16px;
+    .v-icon:hover{
+      color:rgba(42, 70, 126, 0.92) !important;
+    }
+  }
+  }
+  &--content{
+    color: #454F5B;
+  }
+
+}

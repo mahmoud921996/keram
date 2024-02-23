@@ -1,0 +1,14 @@
+.input-date {
+  // margin-top: -7px;
+
+  .v-input__slot {
+      padding: 5px !important;
+      &::before {
+          border: unset !important;
+      }
+
+      &::after {
+        border: unset !important;
+    }
+  }
+}

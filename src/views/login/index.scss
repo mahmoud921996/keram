@@ -1,0 +1,247 @@
+
+@import "@/assets/scss/mixins";
+
+.auth {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 100%;
+  min-height: 100vh;
+
+
+
+  &__right-side {
+    height: 100%;
+
+    &--layer {
+      min-height: 100vh;
+    }
+  }
+
+  &__left-side {
+    min-height: 100vh;
+
+    &__wrap-card {
+      &__back-layer {
+        img {
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      &__img {
+        height: 350px;
+
+        @include screen(965px) {
+          height: 200px;
+        }
+      }
+
+    }
+  }
+
+  &__card-content {
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-21%, -50%) scale(0.85);
+
+    @include langLtr{
+      direction: ltr;
+    }
+
+    @include sm-and-down {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95% !important;
+
+    }
+  }
+}
+
+
+.login-container {
+
+
+  position: relative;
+  background-size: cover;
+  max-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    background-color: rgba(4, 4, 14, 0.525);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  animation: animate_bg 60s infinite alternate;
+}
+
+
+@function multiple-box-shadow($n) {
+  $value: "#{random(2000)}px #{random(2000)}px #{#fff}";
+
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #{#fff}";
+  }
+
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+
+.snow-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  direction: ltr;
+}
+
+.snows-1 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: snowAnimation 60s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+.snows-2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: snowAnimation 50s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+.snows-3 {
+  width: 1.5px;
+  height: 1.5px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: snowAnimation 40s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 2000px;
+    width: 1.5px;
+    height: 1.5px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+.snows-4 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: snowAnimation 30s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+.snows-5 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: snowAnimation 20s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+@keyframes snowAnimation {
+  from {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(2000px)
+  }
+}
+
+@keyframes animate_bg {
+  0% {
+    background-position: top;
+    background-size: 130% 130%;
+  }
+
+  25% {
+    background-position: left;
+    background-size: 140% 140%;
+  }
+
+  50% {
+    background-position: bottom;
+    background-size: 150% 150%;
+  }
+
+  100% {
+    background-position: right;
+    background-size: 100% 100%;
+  }
+}
+
+
+@media(max-width:767px) {
+  .v-select.v-text-field--outlined:not(.v-text-field--single-line) .v-select__selections {
+    font-size: 10px;
+  }
+}
+
+.card-login {
+  border-radius: 38px !important;
+  box-shadow: 0 0 21px #a3d1ff !important;
+}

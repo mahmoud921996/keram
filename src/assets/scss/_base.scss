@@ -1,0 +1,17 @@
+
+.container {
+    width: 100%;
+    padding: 12px 25px;
+  }
+  
+  @media (min-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+  }
+
+  .active-branch{
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    cursor: not-allowed;
+  }

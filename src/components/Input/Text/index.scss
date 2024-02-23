@@ -1,0 +1,23 @@
+@import "@/assets/scss/mixins";
+
+.input{
+  .v-input__append-outer{
+    margin:0 !important;
+    height: 40px !important;
+  }
+  &-search{
+    height: 40px !important;
+    .v-input__slot{
+      border-radius: 8px;
+      border-top-left-radius:unset !important ;
+      border-bottom-left-radius: unset !important;
+    @include langLtr{
+      border-radius: 8px !important;
+      border-top-right-radius:unset !important ;
+      border-bottom-right-radius: unset !important;
+    }
+
+    }
+  }
+
+}

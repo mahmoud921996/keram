@@ -1,0 +1,11 @@
+import Vue from "vue";
+import "./shared";
+import "./mixins";
+// import "./permission";
+import "@/assets/scss/main.scss";
+import "@/api";
+import moment from "vue-moment";
+Vue.use(moment);
+import ToggleService from "@/components/ToggleService";
+Vue.component("toggle-service", ToggleService);
+Vue.prototype.$eventBus = new Vue();

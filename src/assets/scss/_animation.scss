@@ -1,0 +1,111 @@
+.spin {
+  animation: spin infinite 2s linear;
+}
+
+.shake {
+  animation: shake infinite 0.82s linear;
+}
+
+.download {
+  animation: down infinite 0.82s linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes movebounce {
+  0% {
+    transform: translate(0, -10%);
+  }
+
+  50% {
+    transform: translate(0, -5%);
+  }
+
+  100% {
+    transform: translate(0, -10%);
+  }
+}
+
+@keyframes moveRadius {
+  0% {
+    transform: translate(-300px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveCard {
+  0% {
+    margin-top: -100px;
+  }
+
+
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+
+@keyframes preloaderLayer {
+  0% {
+      width: 33.3%;
+  }
+
+  100% {
+      width: 0;
+  }
+
+}
+
+@keyframes preloaderWrpper {
+  0% {
+      visibility: visible;
+  }
+
+  100% {
+      visibility: hidden;
+  }
+}
