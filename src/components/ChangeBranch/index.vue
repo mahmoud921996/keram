@@ -40,7 +40,7 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: "ChangeBranch",
+  name: "ChangeBranchDialog",
   props: {
     branches: {
       type: Array,
